@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<!-- 브라우저에서 html 실행 시 가장 먼저 읽어 -->
+<head>
+    <title>:::index-01 페이지 :::</title>
+    
+    <link rel="stylesheet" type="text/css"
+    href="https://getbootstrap.kr/docs/5.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link href = "{% static '/frontendapp/css/practice.css' %}"
+        rel='stylesheet' type='text/css'>
+
+</head>
+<!-- 몸체(본문) 부분-->
+<!-- 브라우저에 보이는 영역-->
+<body>
+    <!--메뉴 만들기-->
+    <!--링크 주소는 urls.py의 URL과 동일하게 작성-->
+    <!--style :css 적용 1번째 방법 inline 방식-->
+    
+        {% include 'frontendapp/include/bootstrap_nav.html' %}
+       
+    
+
+    <h1>첫번째 크기 헤드라인</h1>
+    <h2>두번째 크기 헤드라인</h2>
+    <h3>세번째 크기 헤드라인</h3>
+    <h4>네번째 크기 헤드라인</h4>
+    <h5>다섯째 크기 헤드라인-가장 작음</h5>
+
+    <p>문단 영역을 나타냅니다.</p>
+
+    <a href = 'http://www.google.com'>구글가기</a>
+
+    <!--수평선 그리기 : 시작태그와 끝태그 없이 시작과 동시에 끝-->
+    <hr/>
+
+    <!--이미지 넣기-->
+    <!--src : 이미지의 위치(웹 경로를 따름)-->
+    <img src="{% static 'frontendapp/images/img_01.png' %}">
+    <img src="{% static 'frontendapp/images/img_02.png' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- 이미지 슬라이딩은 아래 링크를 추가하여 사용하면 됨.. 
+            위에 cdn 스크립트는 지원이 안되는 듯..-->
+    <script src="https://getbootstrap.kr/docs/5.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+            crossorigin="anonymous"></script>
+</body>       
+</html>
